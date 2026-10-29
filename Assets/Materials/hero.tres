@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Models/character/Textures/colormap_hero.png" id="1_u6hsm"]
+
+[resource]
+albedo_texture = ExtResource("1_u6hsm")
+roughness = 0.8
+texture_filter = 0

@@ -1,0 +1,74 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/SpinBar.gd" id="1_6loqd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2jxi1"]
+albedo_color = Color(0.25, 0.25, 0.3, 1)
+roughness = 0.85
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5und2"]
+top_radius = 0.22
+bottom_radius = 0.28
+height = 0.9
+radial_segments = 8
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uukpi"]
+albedo_color = Color(0.95, 0.25, 0.25, 1)
+roughness = 0.85
+emission_enabled = true
+emission = Color(0.95, 0.25, 0.25, 1)
+emission_energy_multiplier = 0.3
+
+[sub_resource type="BoxMesh" id="BoxMesh_bf78o"]
+size = Vector3(4.4, 0.26, 0.26)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b1d6i"]
+albedo_color = Color(1, 0.9, 0.2, 1)
+roughness = 0.85
+emission_enabled = true
+emission = Color(1, 0.9, 0.2, 1)
+emission_energy_multiplier = 0.4
+
+[sub_resource type="BoxMesh" id="BoxMesh_80pem"]
+size = Vector3(0.5, 0.4, 0.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sedmg"]
+albedo_color = Color(1, 0.9, 0.2, 1)
+roughness = 0.85
+emission_enabled = true
+emission = Color(1, 0.9, 0.2, 1)
+emission_energy_multiplier = 0.4
+
+[sub_resource type="BoxMesh" id="BoxMesh_fwtss"]
+size = Vector3(0.5, 0.4, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_80xdu"]
+size = Vector3(4.4, 0.4, 0.4)
+
+[node name="SpinBar" type="Area3D" unique_id=1116921081]
+script = ExtResource("1_6loqd")
+
+[node name="Post" type="MeshInstance3D" parent="." unique_id=1011257477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_2jxi1")
+mesh = SubResource("CylinderMesh_5und2")
+
+[node name="Bar" type="MeshInstance3D" parent="." unique_id=225719856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+material_override = SubResource("StandardMaterial3D_uukpi")
+mesh = SubResource("BoxMesh_bf78o")
+
+[node name="TipL" type="MeshInstance3D" parent="." unique_id=1548640423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.15, 0.55, 0)
+material_override = SubResource("StandardMaterial3D_b1d6i")
+mesh = SubResource("BoxMesh_80pem")
+
+[node name="TipR" type="MeshInstance3D" parent="." unique_id=1931126821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15, 0.55, 0)
+material_override = SubResource("StandardMaterial3D_sedmg")
+mesh = SubResource("BoxMesh_fwtss")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2029002029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+shape = SubResource("BoxShape3D_80xdu")

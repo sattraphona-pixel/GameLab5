@@ -1,18 +1,61 @@
-[gd_scene load_steps=4 format=3 uid="uid://bm1hqybgiajgu"]
+[gd_scene format=3]
 
 [ext_resource type="Script" path="res://Scripts/AudioManager.gd" id="1_iwfhn"]
-[ext_resource type="AudioStream" uid="uid://lnq3qyt6mylm" path="res://Assets/Audio/SFX/jump.ogg" id="1_rkf2p"]
-[ext_resource type="AudioStream" uid="uid://bw1p5rf0tudfx" path="res://Assets/Audio/SFX/coin.ogg" id="3_j83j2"]
+[ext_resource type="AudioStream" path="res://Assets/Audio/SFX/jump.ogg" id="1_rkf2p"]
+[ext_resource type="AudioStream" path="res://Assets/Audio/SFX/coin.ogg" id="3_j83j2"]
+[ext_resource type="AudioStream" path="res://Assets/Audio/SFX/hurt.ogg" id="4_us8kf"]
+[ext_resource type="AudioStream" path="res://Assets/Audio/SFX/jump_pad.ogg" id="5_h1w61"]
+[ext_resource type="AudioStream" path="res://Assets/Audio/SFX/door_open.ogg" id="6_y62ln"]
+[ext_resource type="AudioStream" path="res://Assets/Audio/SFX/checkpoint.ogg" id="7_xl4i1"]
+[ext_resource type="AudioStream" path="res://Assets/Audio/SFX/locked.ogg" id="8_ohn7x"]
+[ext_resource type="AudioStream" path="res://Assets/Audio/SFX/land.ogg" id="9_c5ii8"]
+[ext_resource type="AudioStream" path="res://Assets/Audio/SFX/win.ogg" id="10_b4lxb"]
+[ext_resource type="AudioStream" path="res://Assets/Audio/SFX/break.ogg" id="11_bwg7j"]
+[ext_resource type="AudioStream" path="res://Assets/Audio/Music/sky_garden.ogg" id="12_asc6d"]
 
-[node name="AudioManager" type="Node"]
+[node name="AudioManager" type="Node" unique_id=1430666589]
 script = ExtResource("1_iwfhn")
 
-[node name="JumpSfx" type="AudioStreamPlayer" parent="."]
+[node name="JumpSfx" type="AudioStreamPlayer" parent="." unique_id=1074842904]
 stream = ExtResource("1_rkf2p")
 volume_db = -5.0
-pitch_scale = 1.12
 
-[node name="CoinSfx" type="AudioStreamPlayer" parent="."]
+[node name="CoinSfx" type="AudioStreamPlayer" parent="." unique_id=317820739]
 stream = ExtResource("3_j83j2")
 volume_db = -5.0
-pitch_scale = 1.2
+
+[node name="HurtSfx" type="AudioStreamPlayer" parent="." unique_id=1225094608]
+stream = ExtResource("4_us8kf")
+volume_db = -4.0
+
+[node name="PadSfx" type="AudioStreamPlayer" parent="." unique_id=1939228112]
+stream = ExtResource("5_h1w61")
+volume_db = -5.0
+
+[node name="DoorSfx" type="AudioStreamPlayer" parent="." unique_id=2081617350]
+stream = ExtResource("6_y62ln")
+volume_db = -4.0
+
+[node name="CheckpointSfx" type="AudioStreamPlayer" parent="." unique_id=2085391780]
+stream = ExtResource("7_xl4i1")
+volume_db = -4.0
+
+[node name="LockedSfx" type="AudioStreamPlayer" parent="." unique_id=822641060]
+stream = ExtResource("8_ohn7x")
+volume_db = -6.0
+
+[node name="LandSfx" type="AudioStreamPlayer" parent="." unique_id=1213096982]
+stream = ExtResource("9_c5ii8")
+volume_db = -8.0
+
+[node name="WinSfx" type="AudioStreamPlayer" parent="." unique_id=859387852]
+stream = ExtResource("10_b4lxb")
+volume_db = -3.0
+
+[node name="BreakSfx" type="AudioStreamPlayer" parent="." unique_id=1618175934]
+stream = ExtResource("11_bwg7j")
+volume_db = -6.0
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=546944840]
+stream = ExtResource("12_asc6d")
+volume_db = -12.0

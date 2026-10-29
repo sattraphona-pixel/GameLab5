@@ -1,0 +1,101 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Hazard.gd" id="1_uqd4j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2jxi1"]
+albedo_color = Color(0.25, 0.25, 0.3, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="BoxMesh_ayj06"]
+size = Vector3(1.6, 0.14, 1.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ek0yi"]
+albedo_color = Color(0.85, 0.88, 0.95, 1)
+roughness = 0.3
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_j63b8"]
+top_radius = 0.0
+bottom_radius = 0.2
+height = 0.55
+radial_segments = 4
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_e0wl0"]
+top_radius = 0.0
+bottom_radius = 0.2
+height = 0.55
+radial_segments = 4
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hoks8"]
+top_radius = 0.0
+bottom_radius = 0.2
+height = 0.55
+radial_segments = 4
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_axnyb"]
+top_radius = 0.0
+bottom_radius = 0.2
+height = 0.55
+radial_segments = 4
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tdsk5"]
+top_radius = 0.0
+bottom_radius = 0.2
+height = 0.55
+radial_segments = 4
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qas20"]
+top_radius = 0.0
+bottom_radius = 0.2
+height = 0.55
+radial_segments = 4
+rings = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mjjni"]
+size = Vector3(1.5, 0.6, 1.1)
+
+[node name="Spikes" type="Area3D" unique_id=1614714170]
+script = ExtResource("1_uqd4j")
+
+[node name="Base" type="MeshInstance3D" parent="." unique_id=191103320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0)
+material_override = SubResource("StandardMaterial3D_2jxi1")
+mesh = SubResource("BoxMesh_ayj06")
+
+[node name="Spike00" type="MeshInstance3D" parent="." unique_id=747515687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.4, -0.3)
+material_override = SubResource("StandardMaterial3D_ek0yi")
+mesh = SubResource("CylinderMesh_j63b8")
+
+[node name="Spike01" type="MeshInstance3D" parent="." unique_id=1698754642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.4, 0.3)
+material_override = SubResource("StandardMaterial3D_ek0yi")
+mesh = SubResource("CylinderMesh_e0wl0")
+
+[node name="Spike10" type="MeshInstance3D" parent="." unique_id=1845511728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, -0.3)
+material_override = SubResource("StandardMaterial3D_ek0yi")
+mesh = SubResource("CylinderMesh_hoks8")
+
+[node name="Spike11" type="MeshInstance3D" parent="." unique_id=1943384505]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0.3)
+material_override = SubResource("StandardMaterial3D_ek0yi")
+mesh = SubResource("CylinderMesh_axnyb")
+
+[node name="Spike20" type="MeshInstance3D" parent="." unique_id=570991787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.4, -0.3)
+material_override = SubResource("StandardMaterial3D_ek0yi")
+mesh = SubResource("CylinderMesh_tdsk5")
+
+[node name="Spike21" type="MeshInstance3D" parent="." unique_id=175816126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.4, 0.3)
+material_override = SubResource("StandardMaterial3D_ek0yi")
+mesh = SubResource("CylinderMesh_qas20")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=258154835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+shape = SubResource("BoxShape3D_mjjni")

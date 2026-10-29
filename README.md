@@ -1,7 +1,36 @@
-<p align="center">
-  <img width="350" alt="Group 23" src="https://github.com/SilverDemons-PK/3D-Platformer-Kit/assets/92097566/630fc077-3997-4fc2-b25f-03419cf02dae">
-</p>
+# Sky Garden Adventure — Lab 5 (First 3D Game)
 
-<h1 align="center">3D PLATFORMER STARTER KIT</h1> <p align="center">A simple yet powerful starter template to kickstart your 3D platformer projects in Godot. This kit gives you a solid foundation to build upon—with responsive controls, juicy animations, and basic game logic to save you from reinventing the wheel (again).</p>
+เกม 3D Platformer สร้างด้วย **Godot 4.7** ต่อยอดจาก [3D Platformer Starter Kit](https://github.com/SilverDemons-PK/3D-Platformer-Kit)
 
-<br> <br> <h2 align="center">FEATURES</h2> <ul align="center"> <li>✅ 3D Platformer Character Controller</li> <li>✅ Smooth Idle, Run, Jump, and Jump-Flip Animations</li> <li>✅ Built-in Game Juice (Camera Tilt, SFX Slots, and More)</li> <li>✅ Basic Score System Included</li> <li>✅ Modular Scene Structure & Clean Hierarchy</li> </ul> <br> <br> <h2 align="center">HOW TO USE</h2> <p align="center">Tested and working in Godot 4.1 and above</p> <ul> <li>Download or Clone this repo.</li> <li>Open the project in Godot and hit Play — everything should just work™️.</li> <li>The main scene is located at <code>scenes/demo_scene.tscn</code> — drop your own level geometry, customize UI, and tweak settings freely.</li> <li>Controller logic is inside <code>Player.gd</code>. It’s heavily commented so you won’t get lost in the sauce.</li> </ul> <br> <br> <h2 align="center">USEFUL LINKS</h2> <ul> <li><a href="https://docs.godotengine.org/en/stable/index.html" target="_blank">Godot Documentation</a></li> <li><a href="https://kidscancode.org/godot_recipes/3.x/" target="_blank">Godot Recipes by KidsCanCode</a></li> <li><a href="https://www.youtube.com/watch?v=1qA0nb4l7ns" target="_blank">Adding Game Juice to Your Games (Video)</a></li> </ul> <br> <br> <h2 align="center">CREDITS & NOTES</h2> <p>This kit was built with some good ol’ trial and error, tutorials. If you spot a bug or want to add features — PRs are welcome!</p> <br> <br> <h2 align="center">LICENSE</h2> <p>CC0 — No credit required, but always appreciated. Don’t try to rebrand and sell it though, that's just lame.</p>
+- รหัส: 673380641-6
+- ชื่อ-สกุล: นายศาสตรพล อนันเอื้อ
+- กลุ่มเรียน: 2
+
+**เล่นเกมออนไลน์:** https://sattraphona-pixel.github.io/GameLab5/
+
+## วิธีเล่น
+เก็บเหรียญให้ครบทุกเหรียญในด่าน แล้วเข้าประตูเพื่อไปด่านต่อไป หลบหนาม แท่งหมุน และอย่าตกเกาะ
+
+| ปุ่ม | การทำงาน |
+|---|---|
+| W A S D | เดิน |
+| Space | กระโดด (กดซ้ำกลางอากาศ = กระโดดสองชั้น/ตีลังกา) |
+| Q / E หรือ ลูกศร | หมุนกล้อง |
+| R | เริ่มด่านใหม่ |
+| P / Esc | พัก |
+
+## ด่าน
+1. **Sunny Sky Garden** – เกาะลอยฟ้ายามกลางวัน (22 เหรียญ)
+2. **Crystal Sunset** – เกาะคริสตัลยามพระอาทิตย์ตก (27 เหรียญ)
+
+ในด่านมี: หนาม, แท่งหมุน, แท่นกระโดด (Jump Pad), แพลตฟอร์มเคลื่อนที่, แพลตฟอร์มที่ร่วงเมื่อเหยียบ, Checkpoint, ประตูที่เปิดเมื่อเก็บเหรียญครบ
+
+## สิ่งที่แก้ไขจาก Starter Kit
+- เปลี่ยนตัวละคร Player เป็นโมเดล Low-Poly ใหม่ และจัด Animation ให้ครบเหมือนชุดเดิม (Idle / Run / Jump / Flip)
+- สร้าง 2 ด่านใหม่ พร้อมตกแต่ง (ต้นไม้ ดอกไม้ เมฆ คริสตัล สะพาน ธง) และ Menu / Win / HUD ใหม่
+- เพิ่ม Coyote time, Jump buffer, ระบบ Checkpoint, เพลงและเสียงประกอบ
+
+## Credits
+- โค้ดต้นแบบ: SD Studios – 3D Platformer Starter Kit (CC0)
+- โมเดล Low-Poly: Kenney (kenney.nl) – Starter Kit 3D Platformer (CC0)
+- เสียงเพลง/เอฟเฟกต์: สังเคราะห์เอง + เสียงจาก kit (CC0)

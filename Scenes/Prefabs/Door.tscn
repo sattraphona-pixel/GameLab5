@@ -1,0 +1,73 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Door.gd" id="1_vr6ds"]
+[ext_resource type="FontFile" path="res://Assets/Fonts/Kodchasan-Bold.ttf" id="2_ojga6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlpjd"]
+albedo_color = Color(0.75, 0.72, 0.85, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="BoxMesh_tjn54"]
+size = Vector3(0.5, 3.2, 0.7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cueag"]
+size = Vector3(0.5, 3.2, 0.7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eeyub"]
+size = Vector3(3.2, 0.5, 0.7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5gfg"]
+transparency = 1
+albedo_color = Color(1, 0.3, 0.3, 0.85)
+roughness = 0.3
+emission_enabled = true
+emission = Color(1, 0.3, 0.3, 0.85)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cox0g"]
+top_radius = 1.3
+bottom_radius = 1.3
+height = 0.06
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qtt8b"]
+size = Vector3(2.4, 3, 0.8)
+
+[node name="Door" type="Area3D" unique_id=241946306]
+script = ExtResource("1_vr6ds")
+
+[node name="PillarL" type="MeshInstance3D" parent="." unique_id=1063884814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35, 1.6, 0)
+material_override = SubResource("StandardMaterial3D_tlpjd")
+mesh = SubResource("BoxMesh_tjn54")
+
+[node name="PillarR" type="MeshInstance3D" parent="." unique_id=1759435725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35, 1.6, 0)
+material_override = SubResource("StandardMaterial3D_tlpjd")
+mesh = SubResource("BoxMesh_cueag")
+
+[node name="Lintel" type="MeshInstance3D" parent="." unique_id=1494294420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35, 0)
+material_override = SubResource("StandardMaterial3D_tlpjd")
+mesh = SubResource("BoxMesh_eeyub")
+
+[node name="Portal" type="Node3D" parent="." unique_id=2014601924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+
+[node name="Disc" type="MeshInstance3D" parent="Portal" unique_id=756817955]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_u5gfg")
+mesh = SubResource("CylinderMesh_cox0g")
+
+[node name="Label" type="Label3D" parent="." unique_id=1405570146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.3, 0)
+pixel_size = 0.012
+billboard = 1
+text = "LOCKED"
+font = ExtResource("2_ojga6")
+font_size = 96
+outline_size = 24
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1945174991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_qtt8b")
